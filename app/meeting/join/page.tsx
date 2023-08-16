@@ -8,7 +8,7 @@ import ToggleButton from "@/elements/ToggleButton";
 import CamStreamer from "@/utils/CamStreamer";
 
 export default function Page() {
-  const camViewer = useRef <any> ();
+  const camViewer = useRef <any> (null);
 
   const router = useRouter();
 
