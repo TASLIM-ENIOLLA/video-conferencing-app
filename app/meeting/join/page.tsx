@@ -11,8 +11,8 @@ export default function Page() {
   const camViewer = useRef <any> ();
 
   const router = useRouter();
-  const { isUserMediaAvailable, getStream }: CamStreamer = new CamStreamer();
 
+  const [ mediaAvailable, setMediaAvailable ] useState <boolean> (false);
   const [ meetingParams, setMeetingParams ] = useState <MeetingParamsType> ({
     name: "",
     video: false,
@@ -20,6 +20,10 @@ export default function Page() {
   });
 
   useEffect(() => {
+    const { isUserMediaAvailable, getStream }: CamStreamer = new CamStreamer();
+    
+    setMediaAvailable(isUserMediaAvailable);
+
     if(meetingParams.video) {
       getStream()
       .then(stream => camViewer.current.srcObject = stream)
@@ -63,13 +67,13 @@ export default function Page() {
           <ToggleButton
             type="video"
             title="Toggle video"
-            disabled={!isUserMediaAvailable}
+            disabled={!mediaAvailable}
             onToggle={(state: boolean) => setMeetingParams(n => ({...n, video: state}))}
           />
           <ToggleButton
             type="audio"
             title="Toggle audio"
-            disabled={!isUserMediaAvailable}
+            disabled={!mediaAvailable}
             onToggle={(state: boolean) => setMeetingParams(n => ({...n, audio: state}))}
           />
         </div>

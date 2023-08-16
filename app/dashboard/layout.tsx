@@ -1,26 +1,26 @@
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <section className="flex">
-      <div className="hidden md:block p-5 min-w-[250px] h-screen bg-blue-900"></div>
+      <div className="hidden md:block p-5 min-w-[250px] h-screen border-r"></div>
       <div className="flex-1 h-screen relative">
         <header className="sticky top-0 left-0 border-b px-5 py-3 flex items-center justify-between">
           <div>
             {/* <div className="uppercase font-semibold">dashboard</div> */}
           </div>
-          <div className="flex space-x-10">
+          <div className="flex space-x-7">
             <NotificationTab />
             <ProfileTab />
           </div>
         </header>
         <main>
-          <div className="bg-blue-600 py-3 h-[180px]">
+          <div className="bg-gray-500 py-3 h-[180px]">
             <div className="translate-y-[20%] px-5 space-y-10">
               <div className="flex items-center justify-between">
                 <div>
                   <div className="capitalize text-xl font-bold text-white">courses</div>
                 </div>
                 <div>
-                  <button className="bg-white text-blue-600 rounded-md px-10 py-3 capitalize font-semibold">
+                  <button className="bg-white rounded-md px-10 py-3 capitalize font-semibold">
                     create new project
                   </button>
                 </div>
