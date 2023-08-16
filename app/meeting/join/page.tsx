@@ -12,7 +12,7 @@ export default function Page() {
 
   const router = useRouter();
 
-  const [ mediaAvailable, setMediaAvailable ] useState <boolean> (false);
+  const [ mediaAvailable, setMediaAvailable ] = useState <boolean> (false);
   const [ meetingParams, setMeetingParams ] = useState <MeetingParamsType> ({
     name: "",
     video: false,
