@@ -3,7 +3,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <section className="flex">
       <div className="hidden md:block p-5 min-w-[250px] h-screen border-r"></div>
       <div className="flex-1 h-screen relative">
-        <header className="sticky top-0 left-0 px-5 py-3 flex items-center justify-between">
+        <header className="sticky top-0 left-0 px-5 py-3 flex items-center justify-between z-10">
           <div>
             {/* <div className="uppercase font-semibold">dashboard</div> */}
           </div>
@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <ProfileTab />
           </div>
         </header>
-        <main className="min-h-[100vh]">
+        <main className="z-0 relative min-h-[100vh]">
           <div className="bg-gray-500 py-3 h-[180px]">
             <div className="translate-y-[40px] px-5 space-y-10">
               <div className="flex items-center justify-between">
