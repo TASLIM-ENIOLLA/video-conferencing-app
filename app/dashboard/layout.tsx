@@ -3,7 +3,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <section className="flex">
       <div className="hidden md:block p-5 min-w-[250px] h-screen border-r"></div>
       <div className="flex-1 h-screen relative">
-        <header className="sticky top-0 left-0 px-5 py-3 flex items-center justify-between z-10">
+        <header className="sticky top-0 left-0 px-5 py-3 bg-white shadow-lg flex items-center justify-between z-10">
           <div>
             {/* <div className="uppercase font-semibold">dashboard</div> */}
           </div>
