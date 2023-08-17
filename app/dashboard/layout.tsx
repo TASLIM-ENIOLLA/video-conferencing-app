@@ -12,7 +12,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <ProfileTab />
           </div>
         </header>
-        <main className="z-0 relative min-h-[100vh]">
+        <main className="z-0 relative">
           <div className="bg-gray-500 py-3 h-[180px]">
             <div className="translate-y-[40px] px-5 space-y-10">
               <div className="flex items-center justify-between">
