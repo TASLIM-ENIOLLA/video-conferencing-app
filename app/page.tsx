@@ -2,4 +2,8 @@
 
 import { redirect } from "next/navigation";
 
-redirect("./auth/log-in");
+export default function Page() {
+	redirect("./auth/log-in");
+	
+	return;
+}
