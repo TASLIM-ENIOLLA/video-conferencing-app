@@ -46,14 +46,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   <div className="bg-white shadow-lg space-y-10 rounded-md p-5">
                     <div className="flex items-center justify-between">
                       <div>
-                        <div className="font-semibold capitalize">first semester</div>
+                        <div className="font-semibold capitalize">second semester</div>
                       </div>
                       <div>
                         <AcademicCap /> 
                       </div>
                     </div>
                     <div>
-                      <div className="text-3xl font-bold">15</div>
+                      <div className="text-3xl font-bold">23</div>
                       <div className="font-semibold text-gray-500">registered courses</div>
                     </div>
                   </div>
